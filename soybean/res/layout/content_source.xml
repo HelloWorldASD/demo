@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+	<include  layout="@layout/head_cancel"
+	     android:layout_height="44dp"
+	     android:layout_width="fill_parent"
+	     android:layout_alignParentTop="true"
+	     android:id="@+id/iclTop"/>
+	<RelativeLayout android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/rlyAttention"
+	    android:layout_below="@+id/iclTop">
+	    <TextView android:id="@+id/txtAttention"
+	              android:layout_width="match_parent"
+	              android:layout_height="wrap_content"
+	              android:layout_alignParentTop="true"
+	              android:layout_alignParentLeft="true"
+	              android:text="注意：填写自爆趣闻中涉及的商品名称及商品购买详情页链接，可以让其他用户围观内容来源现场噢！"/>
+	    <ImageView android:id="@+id/ivClose"
+	        	android:layout_width="30dp"
+	        	android:layout_height="30dp"
+	        	android:layout_toRightOf="@+id/txtAttention"
+	        	android:layout_alignParentTop="true"/>
+   		<TextView
+	             android:layout_width="match_parent"
+	             android:layout_height="0.5dp"
+	             android:layout_below="@+id/txtAttention"
+	             android:background="@color/border_gray">
+        </TextView>
+	</RelativeLayout>
+	
+	 <ListView
+	        android:id="@+id/lvSource"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_above="@+id/ivAdd"
+	        android:layout_below="@+id/rlyAttention"
+	        android:divider="@color/gray3"
+            android:dividerHeight="1dp"
+            android:fadingEdge="none"
+            android:scrollbars="none"
+            android:listSelector="#00000000" 
+            android:cacheColorHint="#00000000"
+            android:scrollingCache="false"
+            android:background="@color/white"/>
+	
+	
+    <ImageView android:id="@+id/ivAdd"
+               android:layout_width="100dp"
+               android:layout_height="30dp"
+               android:layout_above="@+id/txtRemark"
+               android:layout_centerHorizontal="true"
+               android:onClick="onClick"
+               android:scaleType="fitXY">
+    </ImageView>
+    
+    <TextView android:id="@+id/txtRemark"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:text="备注：
+1、为保证内容质量，所提内容与商品必须有关联；
+2、最多可添加3组相关内容来源；
+3、建议采用单发模式（1个短闻对应1个商品）；"/>
+</RelativeLayout>

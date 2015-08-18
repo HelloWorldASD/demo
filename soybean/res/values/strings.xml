@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <string name="main_home">首页</string>
+ <string name="main_message">消息</string>
+ <string name="main_my">我的</string>
+ <string name="back">返回</string>
+ <string name="data_error">获取数据失败!</string>
+ 
+ <string name="selPicFromTakePhoto">拍照上传</string>
+ <string name="selPicFromPhone">从相册中上传</string>
+ <string name="cancel">取消</string>
+ <string name="long_anecdote">精选趣闻</string>
+ 
+  <string name="weibosdk_toast_auth_success">授权成功</string>
+  <string name="weibosdk_toast_auth_failed">授权失败</string>
+  <string name="weibosdk_toast_auth_canceled">取消授权</string>
+  
+  <string name="weibosdk_has_not_installed_weibo">未安装新浪微博</string>
+  <string name="weibosdk_cancel_download_weibo">\t取消下载</string>
+    <!-- 分享成功失败的 Toast -->
+  <string name="weibosdk_toast_share_success">分享成功</string>
+  <string name="weibosdk_toast_share_failed">分享失败</string>
+  <string name="weibosdk_toast_share_canceled">取消分享</string>
+  <string name="weibosdk_toast_share_response_args_success">收到微博发起的请求成功</string>
+  <string name="weibosdk_toast_share_response_args_failed">收到客户端请求消息失败</string>
+  
+  <string name="weibosdk_support_api_level_hint"><b>请注意：</b>\n<li>目前第三方分享微博需要客户端的支持，请确保已安装微博客户端。如果不想使用微博客户端进行分享，请参照：<a href="http://open.weibo.com/wiki/2/statuses/upload">OpenAPI</a></li>\n<li>SupportApi >= 10351时，微博客户端支持同时分享多条数据，即同时可以分享文本、图片以及其它媒体资源（网页、音乐、视频、声音）中的一种；</li>\n<li>SupportApi &lt; 10351，微博客户端只支持分享单条数据，即只能分享文本、图片、网页、音乐、视频中的一种，不支持声音（Voice）消息；</li>\n<li>SupportApi = -1，微博客户端不支持 SDK 分享或微博客户端未安装或微博客户端是非官方版本。</li></string>
+  <string name="weibosdk_not_support_api_hint">微博客户端不支持 SDK 分享或微博客户端未安装或微博客户端是非官方版本。</string>
+  
+ 
+  <!-- 二维码页面 -->
+  <string name="qrcode_tip">请在扫描框内扫一扫二维码</string>
+	
+  <string name="xieyi">注册协议</string>   
+  <string name="app_name">毛豆生活</string>
+  <string name="register">注册</string>
+  <string name="send">发送</string>
+  <string name="login">登录</string>
+   <string name="mytb">我的淘宝</string>
+   <string name="editor">编辑</string>
+   <string name="mynews">我的消息</string>
+   <string name="myorders">我的订单</string>
+   <string name="check_update">检查更新</string>
+   <string name="contact_kf">联系客服</string>
+   <string name="help_center">帮助中心</string>
+   <string name="mine">个人中心</string>
+   <string name="me">我</string>
+   <string name="usetaobao1">淘宝账号</string>
+   <string name="server_bad">服务器正在维护,敬请稍等</string>
+   <string name="px">px</string>
+   <string name="dp">dp</string>
+   <string name="image">image</string>
+   <string name="comment_empty">评论不能为空</string>
+   <string name="content_empty">内容不能为空</string>
+   <string name="no_source">暂时找不到宝贝链接</string>
+   <string name="taobao_account">淘宝账号登陆</string>
+   <string name="comment_tips">说几句呗</string>
+   <string name="brilliant_anecdote">精选趣闻</string>
+   <string name="short_essay">短闻</string>
+   <string name="clear_success">清除成功!</string>
+   <string name="no_comment">快来抢沙发~</string>
+   <string name="errcode_success">发送成功</string>
+   <string name="errcode_cancel">发送取消</string>
+   <string name="errcode_deny">发送被拒绝</string>
+   <string name="errcode_unknown">发送返回</string>
+</resources>

@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wshang.soybean"
+    android:versionCode="1"
+    android:versionName="1.0.1" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="getui.permission.GetuiService" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="getui.permission.GetuiService.com.wshang.soybean" />
+
+    <permission
+        android:name="getui.permission.GetuiService.com.wshang.soybean"
+        android:protectionLevel="normal" >
+    </permission>
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:name=".main.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:persistent="true"
+        android:screenOrientation="portrait"
+        android:theme="@style/ContentOverlay" >
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="bae1a9e8c4f8ff8209c6c9ceb0bdc984" />
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="55ade892e0f55a720a000ec1" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="weixinweibo" />
+
+        <!-- 启动画面 -->
+        <activity
+            android:name=".main.SplashScreen"
+            android:configChanges="keyboardHidden"
+            android:theme="@style/ContentOverlay" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 导航容器 -->
+        <activity
+            android:name=".main.MainActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ContentOverlay"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name=".news.CreateInfoArticle"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" >
+        </activity>
+        <activity
+            android:name=".news.EssenceInfo"
+            android:configChanges="orientation"
+            android:screenOrientation="nosensor"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name=".news.InfoArticleDetail"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <activity android:name=".news.TextInfoArticleDetail" >
+        </activity>
+        <activity
+            android:name=".news.ContentSource"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" >
+        </activity>
+        <activity android:name=".news.ThemeList" >
+        </activity>
+        <activity android:name=".news.CategoryList" >
+        </activity>
+        <activity android:name=".album.PhotoAlbumActivity" >
+        </activity>
+        <activity android:name=".album.PhotoActivity" >
+        </activity>
+        <activity android:name=".album.ShowBigPic" >
+        </activity>
+        <activity
+            android:name="com.wshang.soybean.news.NewsShare"
+            android:theme="@style/TranslucentUnfullwidthWinStyle"
+            android:windowSoftInputMode="stateHidden" >
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".news.DataSourcePop"
+            android:theme="@style/TranslucentUnfullwidthWinStyle"
+            android:windowSoftInputMode="stateHidden" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".news.ShowBigPhoto"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".my.Login"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".my.PraiseList"
+            android:configChanges="orientation"
+            android:screenOrientation="nosensor"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".my.GouShiGuangLogin"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".my.FindPassword"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".my.BindingMobile"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".my.CaptureActivity"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 交换记录 -->
+        <activity android:name=".integralmall.ExchangeRecordList" >
+        </activity>
+        <!-- 抽奖 -->
+        <activity android:name=".integralmall.Luck" >
+        </activity>
+
+        <!-- 积分兑换 -->
+        <activity android:name=".integralmall.CreditActivity" >
+        </activity>
+
+        <!-- 申请评测列表 -->
+        <activity android:name=".evaluation.ApplyEvaluationList" />
+
+        <!-- 申请评测 -->
+        <activity android:name=".evaluation.ApplyEvaluation" />
+
+        <!-- 申请评测填写理由 -->
+        <activity android:name=".evaluation.WriteApplyEvaluation" />
+
+        <!-- 个人信息 -->
+        <activity
+            android:name=".my.PersonInfo"
+            android:launchMode="standard" />
+
+        <!-- 修改个人信息 -->
+        <activity
+            android:name=".my.PersonDetail"
+            android:launchMode="standard" />
+        <!-- 收货地址 -->
+        <activity android:name=".my.AddressActivity" />
+        <!-- 我的订单 -->
+        <activity android:name=".my.MyOrder" />
+        <!-- 我的喜欢 -->
+        <activity android:name=".my.MyCollection" />
+        <!-- 我的积分 -->
+        <activity android:name=".integralmall.MyMainIntegral" />
+        <!-- 积分详情 -->
+        <activity android:name=".integralmall.IntegralDetail" />
+
+        <!-- 设置 -->
+        <activity android:name=".my.Set" />
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+
+            <!--
+            	AuthorizeAdapter表示一个继承自cn.sharesdk.framework.authorize.AuthorizeAdapter
+            	的类，这个类可以监听到页面的生命周期，也可以获取授权页面的各种UI控件。 
+            	开发者可以通过继承AuthorizeAdapter，重写其方法，并获取各种UI来自定义这个页面的行为。
+            -->
+            <meta-data
+                android:name="AuthorizeAdapter"
+                android:value="cn.sharesdk.demo.MyAdapter" />
+
+            <!--
+            	QZoneWebShareAdapter表示一个继承自cn.sharesdk.tencent.qzone.QZoneWebShareAdapter
+            	的类，这个类可以监听到页面的生命周期，也可以获QQ空间网页分享权页面的各种UI控件。 
+            	开发者可以通过继承QZoneWebShareAdapter，重写其方法，并获取各种UI来自定义这个页面的行为。
+            	
+            <meta-data android:name="QZoneWebShareAdapter" android:value="cn.sharesdk.demo.MyQZoneWebShareAdapter" />
+            -->
+            <!--
+            	Dropbox的SSO功能需要在此处添加一个对ACTION_VIEW事件的过滤器，其中的scheme是
+            	“db-”前缀再开发者应用的加上appKey。如果此过滤器不设置，则不能完成SSO功能授权
+            -->
+            <intent-filter>
+                <data android:scheme="db-7janx53ilz11gbs" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!--
+            	如果集成QQ分享，或者使用QQ客户端来进行QQ空间的分享，须要在此处添加一个对ACTION_VIEW
+            	事件的过滤器，其中的scheme是“tencent”前缀再开发者应用的加上appId。如果此过滤器不设置，
+            	则分享结束以后不能得到正确的回调
+            -->
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".main.WebActivity" />
+        <activity
+            android:name=".my.TakePhonePop"
+            android:theme="@style/TranslucentUnfullwidthWinStyle" />
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+        <activity android:name="com.tencent.plus.ImageActivity" />
+
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" >
+        </service>
+
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1104766178" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 微信回调activity -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 个推SDK配置开始 -->
+        <!-- 配置的第三方参数属性 -->
+        <meta-data
+            android:name="PUSH_APPID"
+            android:value="qRxk0TaVarACDUjdwpEPM4" />
+ <!-- 替换为第三方应用的APPID -->
+        <meta-data
+            android:name="PUSH_APPKEY"
+            android:value="KgyDvSI0IM9Yy4xVyCRV02" />
+ <!-- 替换为第三方应用的APPKEY -->
+        <meta-data
+            android:name="PUSH_APPSECRET"
+            android:value="P6Y6T022Se6uMg7H6yRw23" />
+ <!-- 替换为第三方应用的APPSECRET -->
+        <meta-data
+            android:name="PUSH_GROUPID"
+            android:value="" />
+        <!-- 配置第三方Receiver -->
+        <receiver
+            android:name="com.wshang.soybean.main.PushReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.qRxk0TaVarACDUjdwpEPM4" />
+            </intent-filter>
+        </receiver>
+        <!-- 配置SDK核心服务 -->
+        <service
+            android:name="com.igexin.sdk.PushService"
+            android:exported="true"
+            android:label="NotificationCenter"
+            android:process=":pushservice" >
+        </service>
+
+        <receiver android:name="com.igexin.sdk.PushReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.igexin.sdk.action.refreshls" />
+                <!-- 以下四项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.igexin.sdk.PushManagerReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.pushmanager" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.igexin.sdk.PushActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.igexin.getuiext.activity.GetuiExtActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="android.task.myServicetask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service
+            android:name="com.igexin.download.DownloadService"
+            android:process=":pushservice" />
+
+        <receiver android:name="com.igexin.download.DownloadReceiver" >
+            <intent-filter>
+
+                <!-- 这个com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4固定，不能修改 -->
+                <action android:name="com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4" />
+                <!-- android:name="com.igexin.sdk.action.第三方的appId" -->
+                <action android:name="com.igexin.sdk.action.qRxk0TaVarACDUjdwpEPM4" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.igexin.download.DownloadProvider"
+            android:authorities="downloads.com.wshang.soybean"
+            android:process=":pushservice" />
+        <!-- android:authorities="downloads.com.getui.demo" -->
+
+        <receiver
+            android:name="com.igexin.getuiext.service.PayloadReceiver"
+            android:exported="false" >
+            <intent-filter>
+
+                <!-- 这个com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4固定，不能修改 -->
+                <action android:name="com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.igexin.getuiext.service.GetuiExtService"
+            android:process=":pushservice" />
+
+        <!-- 阿里百川开始 -->
+        <activity android:name="com.alibaba.sdk.android.webview.BaseWebViewActivity" />
+
+        <receiver
+            android:name="com.alibaba.sdk.android.hotpatch.HotPatchBroadcastReceiver"
+            android:exported="false"
+            android:process=":hotpatch" >
+            <intent-filter>
+                <action android:name="com.alibaba.sdk.android.hotpatch.action.HOT_PATCH" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.alibaba.sdk.android.trade.ui.TradeWebViewActivity" >
+            <intent-filter>
+                <action android:name="COM_TAOBAO_TAE_SDK_TRADE_WEB_VIEW_ACTION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" >
+        </activity>
+        <activity android:name="com.alibaba.sdk.android.login.ui.LoginWebViewActivity" />
+        <activity
+            android:name="com.alibaba.sdk.android.login.ui.QrLoginActivity"
+            android:theme="@style/tae_sdk_login_qr_activity_style" />
+
+        <!-- 阿里百川结束 -->
+        <!-- 个推SDK配置结束 -->
+
+    </application>
+    <!-- 适配不同屏幕 -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" >
+    </supports-screens>
+
+</manifest>

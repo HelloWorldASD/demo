@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent"  
+    android:orientation="vertical" > 
+    
+   <FrameLayout
+        android:id="@+id/flyContent"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+   </FrameLayout>
+
+   <LinearLayout
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/llyNavi"
+         android:orientation="vertical" >
+		<ImageView 
+		    android:layout_width="match_parent"
+		    android:layout_height="1dp"
+		    android:background="@color/home_thread_bg" />
+		
+        <RadioGroup
+             android:id="@+id/main_tab_group"
+             android:layout_width="fill_parent"
+             android:layout_height="49dp"
+             android:layout_gravity="bottom"
+             android:background="@drawable/jbshape"
+             android:gravity="center_vertical"
+             android:orientation="horizontal" >
+			<RadioButton
+	                android:id="@+id/rbnHome"
+	                style="@style/MMTabButton"
+	                android:checked="true"
+	                android:drawableTop="@drawable/home_selector"
+	                android:text="@string/main_home" />
+	
+	        <RadioButton
+	            android:id="@+id/rbnMessage"
+	            style="@style/MMTabButton"
+	            android:drawableTop="@drawable/message_selector"
+	            android:text="@string/main_message" />
+	        <RadioButton
+	            android:id="@+id/rbnMy"
+	            style="@style/MMTabButton" 
+	            android:drawableTop="@drawable/my_selector"
+	            android:text="@string/main_my" />
+         </RadioGroup>
+     </LinearLayout>
+</LinearLayout>

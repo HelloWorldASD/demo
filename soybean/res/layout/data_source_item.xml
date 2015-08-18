@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+   <TextView android:id="@+id/txtTitle"
+            style="@style/left_black_14"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:text="沙滩鞋"/>
+   <TextView android:id="@+id/txtUrl"
+            style="@style/left_black_14"
+            android:text=""
+            android:lines="2"
+            android:textColor="@color/hyper_link"
+            android:layout_marginLeft="@dimen/margin_right"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/txtTitle"/>
+</RelativeLayout>

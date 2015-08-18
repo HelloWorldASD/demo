@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="waterfall_cell_name_height">22.0dip</dimen>
+    <dimen name="waterfall_cell_padding">2.0dip</dimen>
+    <dimen name="waterfall_cell_margin">2.0dip</dimen>
+    <dimen name="waterfall_cell_ratingbar_margin_bottom">2.0dip</dimen>
+    <dimen name="popmenu_width">137dp</dimen>
+    <dimen name="popmenu_yoff">6dp</dimen>
+    <dimen name="buttonPadLeft">7dp</dimen>
+    <dimen name="buttonPadRight">7dp</dimen>
+    <dimen name="buttonPadTop">3dp</dimen>
+    <dimen name="buttonMR">7dp</dimen>
+    <dimen name="serviceImg">16dp</dimen>
+    <dimen name="pulldown">40dp</dimen>
+    <dimen name="search_types_h">75dp</dimen>
+    <dimen name="gridview_2cell">160dp</dimen>
+    <dimen name="margin_left">10dp</dimen>
+    <dimen name="margin_right">10dp</dimen>
+    <dimen name="margin_top">10dp</dimen>
+    <dimen name="margin_bottom">10dp</dimen>
+
+</resources>

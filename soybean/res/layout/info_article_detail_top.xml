@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+ <RelativeLayout 
+   	  xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+	<RelativeLayout android:id="@+id/rlyPerson"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginTop="@dimen/margin_top">
+        	<ImageView android:id="@+id/ivPerson"
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:scaleType="fitXY"
+                   android:layout_alignParentLeft="true"
+                   android:layout_centerVertical="true"
+                   android:src="@drawable/default_person"/>
+        	
+	        <LinearLayout 
+				   android:layout_width="match_parent"
+				   android:layout_height="wrap_content"
+				   android:layout_marginLeft="5dp"
+				   android:layout_toRightOf="@+id/ivPerson"
+				   android:layout_centerVertical="true"
+				   android:orientation="vertical">
+		        <TextView android:id="@+id/txtNickName"
+		            style="@style/left_black_16"
+		            android:text=""/>
+		        <TextView android:id="@+id/txtAddTime"
+		            style="@style/left_gray_14"
+		            android:layout_marginTop="5dp"
+		            android:text=""/>
+	        </LinearLayout>
+	</RelativeLayout>
+    <TextView android:id="@+id/txtContent"
+        style="@style/left_black_16"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_right"
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_marginBottom="@dimen/margin_bottom"
+        android:layout_below="@+id/rlyPerson"
+        android:layout_alignParentLeft="true"
+        android:text=""/>
+    <GridView
+        android:id="@+id/gvNews"
+   		android:layout_width = "match_parent"
+        android:layout_height="wrap_content"
+        android:stretchMode="columnWidth"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_right"
+        android:numColumns="3"
+        android:listSelector="@null"
+        android:layout_below="@+id/txtContent"
+ >
+    </GridView>  
+    <TextView android:id="@+id/txtSplit"
+		       android:layout_height="10dp"
+		       android:layout_below="@+id/gvNews"
+		       android:layout_width="match_parent"
+		       android:background="@color/lightgray"/>
+    	
+    <RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/txtSplit"
+	    android:id="@+id/rlyComment">
+	   <TextView android:id="@+id/txtTitle"
+	            style="@style/left_gray_14"
+	            android:layout_centerVertical="true"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginTop="5dp"
+	    		android:layout_marginBottom="5dp"
+	            android:layout_marginLeft="@dimen/margin_left"
+	            android:text="评论"/>
+	   <TextView android:id="@+id/txtCommentCount"
+	            style="@style/left_gray_14"
+	            android:text=""
+	            android:layout_centerVertical="true"
+	            android:layout_marginTop="5dp"
+	    		android:layout_marginBottom="5dp"
+	            android:layout_marginLeft="5dp"
+	            android:layout_toRightOf="@+id/txtTitle"
+	            />
+	</RelativeLayout>
+	<LinearLayout android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/llyNoComment"
+	    android:visibility="gone"
+	    android:layout_below="@+id/rlyComment"
+	    android:orientation="vertical">
+	    <TextView android:id="@+id/txtNoCommentSplit"
+		       android:layout_height="1dp"
+		       android:layout_width="match_parent"
+		       android:background="@color/lightgray"/>
+  	 	<TextView
+		     android:id="@+id/txtNoComment"
+			 style="@style/gray_16"
+			 android:layout_width="match_parent"
+			 android:text="@string/no_comment"/>
+	</LinearLayout>
+</RelativeLayout>

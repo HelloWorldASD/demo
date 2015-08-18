@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black">
+	<ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/push"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="ivIcon" />
+	<TextView
+	        android:id="@+id/txtContent"
+	        style="@style/left_white_16"
+	        android:layout_centerVertical="true"
+	        android:layout_toRightOf="@+id/ivIcon"
+	        android:lines="2"/>
+</RelativeLayout>

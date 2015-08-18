@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:descendantFocusability="blocksDescendants">
+   <LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/llyLeft"
+	    android:orientation="vertical">
+	     <RelativeLayout android:id="@+id/rlyTitle"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@color/gather_watch_title_grey">
+	         <TextView android:id="@+id/txtLeft"
+	            style="@style/left_black_14"
+	            android:layout_toLeftOf="@+id/txtTime"
+	            android:layout_height="0.5dp"
+	            android:layout_width="match_parent"
+	            android:layout_marginLeft="15dp"
+	            android:layout_marginRight="5dp"
+	            android:layout_centerVertical="true"
+	            android:background="@color/line_gray"/>
+        
+	         <TextView android:id="@+id/txtTime"
+		            style="@style/left_gray_14"
+		            android:layout_gravity="center_horizontal"
+		            android:layout_height="40dp"
+		            android:layout_width="wrap_content"
+		            android:layout_centerInParent="true"
+		            android:text=""/>
+          
+	          <TextView android:id="@+id/txtRight"
+		            style="@style/left_black_14"
+		            android:layout_toRightOf="@+id/txtTime"
+		            android:layout_height="0.5dp"
+		            android:layout_marginLeft="5dp"
+	                android:layout_marginRight="15dp"
+		            android:layout_width="match_parent"
+		            android:layout_centerVertical="true"
+		            android:background="@color/line_gray"/>
+    	</RelativeLayout>
+    
+    	<RelativeLayout android:id="@+id/rlyPerson"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left">
+	        <FrameLayout android:id="@+id/flyPerson"
+	            android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true">
+	            <ImageView android:id="@+id/ivPerson"
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:scaleType="fitXY"
+                    android:layout_gravity = "center_vertical"
+                   android:src="@drawable/default_person"/>
+	            <ImageView android:id="@+id/ivUnRead"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:scaleType="fitXY"
+                   android:layout_gravity="top|right"
+                   android:src="@drawable/msg_unread_bg"/>
+	        </FrameLayout>
+
+	        <TextView android:id="@+id/txtNickName"
+	                android:layout_toRightOf="@+id/flyPerson"
+		            style="@style/left_black_16"
+		            android:layout_centerVertical="true"
+		            android:singleLine="true"
+		            android:text=""/>
+		</RelativeLayout>
+    
+ 		<TextView 
+           android:id="@+id/txtContent"
+           android:layout_marginTop="5dp" 
+           android:layout_marginLeft="@dimen/margin_left"
+           android:layout_marginRight="@dimen/margin_right"
+           android:layout_marginBottom="5dp"
+           android:lines="2"
+           style="@style/left_black_16" /> 
+   </LinearLayout>
+    
+	<RelativeLayout
+	        android:id="@+id/rlyRight"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:background="@color/red" >
+	        <TextView
+	            android:id="@+id/txtDelete"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true"
+	            android:gravity="center"
+	            android:text="删除"
+	            android:textColor="@color/white" />
+	</RelativeLayout> 
+</LinearLayout>

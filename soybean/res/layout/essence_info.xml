@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <FrameLayout  
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_above="@+id/llyBottom">
+	    <RelativeLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:id="@+id/rlyContent">
+		    <include layout="@layout/head_back"
+		        android:layout_alignParentTop="true"
+		        android:layout_width="fill_parent"
+		        android:layout_height="44dp"
+		        android:id="@+id/iclTop" />
+		    <WebView
+		        android:id="@+id/wvDetail"
+		        android:layout_below="@+id/iclTop"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"/>
+		</RelativeLayout>
+		<TextView android:id="@+id/txtCommentOutArea"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:alpha="0"/>
+	</FrameLayout>
+     <LinearLayout android:id="@+id/llyBottom"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:layout_alignParentBottom="true">
+	      <TextView android:layout_width="match_parent"
+              		android:layout_height="1dp"
+			        android:background="@color/border_gray"
+			        android:id="@+id/txtSplit"/>
+	      <include layout="@layout/share_coment_source_praise"/>
+	      <include layout="@layout/send_comment"
+	          android:visibility="gone"/>
+     </LinearLayout>
+</RelativeLayout>

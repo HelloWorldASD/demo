@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rlyPerson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginTop="@dimen/margin_top" >
+
+        <ImageView
+            android:id="@+id/ivPerson"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/default_person" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/ivPerson"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtNickName"
+                style="@style/left_black_16"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtAddTime"
+                style="@style/left_gray_14"
+                android:layout_marginTop="5dp"
+                android:text="" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtContent"
+        style="@style/left_black_16"
+        android:layout_marginBottom="@dimen/margin_bottom"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_right"
+        android:layout_marginTop="@dimen/margin_top"
+        android:text="" />
+
+    <GridView
+        android:id="@+id/gvNews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_right"
+        android:listSelector="@null"
+        android:numColumns="3"
+        android:stretchMode="columnWidth" >
+    </GridView>
+
+    <TextView
+        android:id="@+id/txtSplit"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/border_gray" />
+
+    <include layout="@layout/share_coment_source_praise" />
+
+    <TextView
+        android:id="@+id/txtItemSplit"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/lightgray" />
+
+</LinearLayout>

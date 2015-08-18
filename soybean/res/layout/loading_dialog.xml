@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/cornershakegray"
+    android:gravity="center"
+    android:padding="30dp"
+    android:orientation="horizontal" >
+
+    <ProgressBar
+        style="?android:progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:indeterminateDrawable="@drawable/progress_refresh_rotate"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/TVloadTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10.0dip"
+        android:text="加载中..."
+        android:textColor="#ff565656"
+        android:textSize="18.0sp" />
+
+</LinearLayout>

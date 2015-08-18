@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">  
+    
+    <FrameLayout  
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_above="@+id/llyBottom">
+	    <RelativeLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:id="@+id/rlyContent">
+		     <include layout="@layout/head_title"
+		        android:layout_height="44dp"
+			    android:layout_width="fill_parent"
+			    android:layout_alignParentTop="true"
+			    android:id="@+id/iclTop"/>
+		    <android.support.v4.widget.SwipeRefreshLayout  
+		        android:id="@+id/swipe_container"
+		        android:layout_below="@+id/iclTop"
+		        android:layout_width="match_parent"  
+		        android:layout_height="match_parent">  
+		  		   <ListView
+					        android:id="@+id/lvNews"
+					        android:layout_width="match_parent"
+					        android:layout_height="match_parent"
+					        android:divider="@color/white"
+				            android:dividerHeight="0dp"
+				            android:fadingEdge="none"
+				            android:scrollbars="none"
+				            android:listSelector="#00000000" 
+				            android:cacheColorHint="#00000000"
+				            android:scrollingCache="false"
+				            android:background="@color/white"/>
+		     </android.support.v4.widget.SwipeRefreshLayout>
+		</RelativeLayout>
+		<TextView android:id="@+id/txtCommentOutArea"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:layout_marginLeft="@dimen/margin_left"
+        	android:layout_marginRight="@dimen/margin_right"
+		    android:alpha="0"/>
+	</FrameLayout>
+	<include layout="@layout/send_comment"
+	    android:id="@+id/llyBottom"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:visibility="gone"/>
+</RelativeLayout>
+

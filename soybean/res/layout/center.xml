@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray"
+    android:orientation="vertical" >
+    <include layout="@layout/head_title"
+	        android:layout_height="44dp"
+		    android:layout_width="fill_parent"
+		    android:id="@+id/iclTop"/>
+    <ScrollView
+           android:layout_width="match_parent"
+	       android:layout_height="match_parent"
+	       android:scrollbars="none">
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+	        
+            <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="60dp"
+		        android:background="@color/white"
+		        android:id="@+id/rlyLogin" >
+	            <ImageView android:id="@+id/ivHeader" 
+	                    android:layout_width="40dp"
+	                    android:layout_height="40dp"
+	                    android:layout_marginLeft="@dimen/margin_left"
+	                    android:layout_alignParentLeft="true"
+	                    android:scaleType="fitXY"
+	                    android:src="@drawable/default_person"
+	                    android:layout_centerVertical="true" />
+	            
+	            <TextView
+	                    android:id="@+id/txtNickName"
+	                    style="@style/left_gray_14"
+	                    android:layout_toRightOf="@+id/ivHeader"
+	                    android:layout_marginLeft="@dimen/margin_left"
+	                    android:layout_centerVertical="true"
+	                    android:text="淘宝账号登陆" />
+	        </RelativeLayout>
+           
+       	   <RelativeLayout android:id="@+id/rlySignin"
+				 android:layout_width="match_parent"
+				 android:layout_height="50dp"
+				 android:layout_marginTop="@dimen/margin_top"
+				 android:background="@color/white"
+				 >
+				    <TextView
+		                android:id="@+id/txtSignin"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                style="@style/left_black_16"
+		                android:layout_centerVertical="true"
+		                android:layout_marginLeft="@dimen/margin_left"
+		                android:text="消息推送" />
+
+					    <ToggleButton
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:background="@drawable/ios7_btn"
+					        android:layout_marginRight="@dimen/margin_right"
+					        android:layout_alignParentRight="true"
+					   		android:layout_centerVertical="true"
+					        android:checked="false"
+					        android:id="@+id/tbPush"
+					        android:text=""
+					        android:textOff=""
+					        android:textOn="" />   	
+		   </RelativeLayout>
+       	   
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/margin_top"
+              android:orientation="vertical">
+				<RelativeLayout android:id="@+id/rlyPraise"
+				    android:layout_width="match_parent"
+				     android:background="@color/white"
+				    android:layout_height="50dp">
+				    
+				    <TextView
+		                android:id="@+id/txtPraiseTitle"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                style="@style/left_black_16"
+		                android:layout_centerVertical="true"
+		                android:layout_marginLeft="@dimen/margin_left"
+		                android:text="赞美一下" />
+				    
+				    <ImageView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		               	android:layout_centerVertical="true"
+		               	android:scaleType="fitCenter"
+		               	android:layout_marginRight="@dimen/margin_right"
+		               	android:layout_alignParentRight="true"
+		               	android:src="@drawable/arrow_right"/>
+				</RelativeLayout>
+	            
+               <RelativeLayout android:id="@+id/rlyBad"
+				    android:layout_width="match_parent"
+				    android:layout_marginTop="0.5dp"
+				     android:background="@color/white"
+				    android:layout_height="50dp">
+				    <TextView
+		                android:id="@+id/txtComment"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                style="@style/left_black_16"
+		                android:layout_centerVertical="true"
+		                android:layout_marginLeft="@dimen/margin_left"
+		                android:text="吐槽一下" />
+				    
+				    <ImageView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		               	android:layout_centerVertical="true"
+		               	android:scaleType="fitCenter"
+		               	android:layout_marginRight="@dimen/margin_right"
+		               	android:layout_alignParentRight="true"
+		               	android:src="@drawable/arrow_right"/>
+				</RelativeLayout>
+    	</LinearLayout>
+		<RelativeLayout android:id="@+id/rlyCache"
+				    android:layout_width="match_parent"
+				    android:layout_marginTop="@dimen/margin_top"
+				    android:background="@color/white"
+				    android:layout_height="50dp"> 
+		    <TextView
+                android:id="@+id/txtCache"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/left_black_16"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:text="清空缓存" />
+	  </RelativeLayout>
+
+       <RelativeLayout android:id="@+id/rlyVersionUpdate"
+		    android:layout_width="match_parent"
+		    android:layout_marginTop="@dimen/margin_top"
+		    android:background="@color/white"
+		    android:layout_height="50dp">
+		    <TextView
+	               android:id="@+id/txtVersionUpdate"
+	               android:layout_width="wrap_content"
+	               android:layout_height="wrap_content"
+	               style="@style/left_black_16"
+	               android:layout_centerVertical="true"
+	               android:layout_marginLeft="@dimen/margin_left"
+	               android:text="版本更新" />
+		    
+		     <TextView
+	               android:id="@+id/txtVersionNumber"
+	               android:layout_width="wrap_content"
+	               android:layout_height="wrap_content"
+	               android:layout_alignParentRight="true"
+	               style="@style/left_gray_16"
+	               android:layout_centerVertical="true"
+	               android:layout_marginRight="@dimen/margin_right"
+	               android:text="" />
+		</RelativeLayout>
+		
+         <RelativeLayout android:id="@+id/rlyExit"
+		    android:layout_width="match_parent"
+		    android:layout_marginTop="@dimen/margin_top"
+		    android:background="@color/white"
+		    android:layout_height="50dp">
+		    <TextView
+	               android:id="@+id/txtExit"
+	               android:layout_width="wrap_content"
+	               android:layout_height="wrap_content"
+	               style="@style/left_black_16"
+	               android:layout_centerVertical="true"
+	               android:layout_marginLeft="@dimen/margin_left"
+	               android:text="退出账号" />
+		</RelativeLayout>
+		</LinearLayout>
+    </ScrollView>
+</LinearLayout>

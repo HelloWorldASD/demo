@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:id="@+id/rlySource0">
+		<TextView android:id="@+id/txtGoodsNameTitle"
+            style="@style/left_black_14"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:text="商品名称"/>
+		    
+		<EditText android:id="@+id/edtGoodsName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            style="@style/left_black_14"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/txtGoodsNameTitle"
+            android:layout_marginRight="50dp"
+            android:text=""/>
+		    
+		<TextView android:id="@+id/txtGoodsUrl"
+            style="@style/left_black_14"
+            android:layout_below="@+id/txtGoodsNameTitle"
+            android:layout_alignLeft="@+id/txtGoodsNameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="商品链接"/>
+		     
+	   <EditText android:id="@+id/edtGoodsUrl"
+            style="@style/left_black_14"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/edtGoodsName"
+            android:layout_alignLeft="@+id/edtGoodsName"
+            android:layout_marginRight="50dp"
+            android:text=""/>
+       <ImageView android:id="@+id/ivDelete"
+           android:layout_width="30dp"
+           android:layout_height="30dp"
+           android:layout_centerVertical="true"
+           android:layout_alignParentRight="true"
+           android:src="@drawable/subtraction"
+           android:layout_marginRight="@dimen/margin_right"/>
+</RelativeLayout>

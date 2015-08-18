@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <corners android:radius="8dp" />
+    <!-- 设置圆角半径 -->
+    <stroke
+        android:dashWidth="0.8dp"
+        android:width="0.8dp"
+        android:color="#343536" />
+    <solid android:color="@android:color/white" />
+    <!-- 填充的颜色 -->
+
+</shape>

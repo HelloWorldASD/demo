@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="60dp"
+	    android:id="@+id/rlyPerson"
+	    android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginTop="5dp">
+	     <ImageView android:id="@+id/ivPerson"
+		        android:layout_width="40dp"
+		        android:layout_height="40dp"
+		        android:layout_centerVertical="true"
+		        android:layout_alignParentLeft="true"
+		        android:src="@drawable/default_person"
+		        android:scaleType="fitXY">
+         </ImageView>
+         <LinearLayout android:id="@+id/llyContent"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_toRightOf="@+id/ivPerson"
+	        android:orientation="vertical"
+	        android:layout_centerVertical="true">
+	        <TextView android:id="@+id/txtNickName"
+		            style="@style/left_black_16"
+		            android:text=""/>
+		    <TextView android:id="@+id/txtAddTime"
+		            style="@style/left_gray_14"
+		            android:layout_marginTop="5dp"
+		            android:text=""/>
+    	</LinearLayout>
+    </RelativeLayout>
+    <TextView android:id="@+id/txtContent"
+        	  android:layout_below="@+id/rlyPerson"
+	          style="@style/left_black_16"
+	          android:layout_marginLeft="55dp"
+	          android:layout_marginRight="@dimen/margin_right"
+	          android:paddingBottom="@dimen/margin_bottom"
+	          android:text=""/>
+</RelativeLayout>

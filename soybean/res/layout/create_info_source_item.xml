@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp">
+    <ImageView android:id="@+id/ivDelete"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/subtraction"/>
+   <TextView android:id="@+id/txtTitle"
+            style="@style/left_black_14"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ivDelete"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:text="沙滩鞋"/>
+   <TextView android:id="@+id/txtUrl"
+            style="@style/left_black_14"
+            android:text="www.baidu.com"
+            android:layout_marginRight="@dimen/margin_right"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/txtTitle"/>
+</RelativeLayout>
